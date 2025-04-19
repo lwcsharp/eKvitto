@@ -1,4 +1,4 @@
-import { loadNavbar } from "./navigation/navbar.js";
+import { loadNavbar } from "../navigation/navbar.js";
 
 console.log("Initializing app...");
 const initApp = async () => {

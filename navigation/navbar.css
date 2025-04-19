@@ -2,8 +2,7 @@ header {
   top: 0;
   bottom: 0;
   position: sticky;
-  background: rgb(34, 33, 33);
-  opacity: 0.9;
+  background: rgba(34, 33, 33, 0.89);
 }
 
 nav {
