@@ -1,4 +1,4 @@
-@import '../../navigation/navbar.css';
+@import '/navigation/navbar.css';
 
 * {
   padding: 0;
@@ -33,13 +33,14 @@ a {
 }
 
 .flex-container h1 {
-  font-weight: 650;
+  font-weight: 660;
   font-size: 2rem;
+  text-align: center;
   background: linear-gradient(
     0deg,
-    #e3e1db 0%,
+    #dcdbd6 0%,
     #757470 21%,
-    #f9f8f3 51%,
+    #e0dfda 51%,
     #79786e 100%
   );
   background-clip: text;
