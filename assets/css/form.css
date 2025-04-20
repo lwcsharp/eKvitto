@@ -1,0 +1,60 @@
+/* Knappars utseende */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 2rem 0;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0.3rem 0;
+  color: #f4f4f4;
+  background: #282624;
+  line-height: 1.2;
+  width: 30%;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.5rem 0.2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #353332;
+}
+
+form {
+  padding: 2rem 0;
+}
+
+form .form-group {
+  margin-bottom: 1rem;
+}
+
+form .form-group label {
+  display: block;
+  color: #f4f4f4;
+}
+
+form .form-group input,
+form .form-group textarea {
+  width: 100%;
+  padding: 0.35rem;
+  border: solid 1px #ddd;
+  outline: none !important;
+}
+
+form .form-group textarea {
+  height: 10rem;
+}
+
+form .form-group input:focus,
+form .form-group textarea:focus {
+  border: solid 1px #ef6c00;
+}
+
+form .form-price{
+  display: flex;
+  justify-content: space-evenly;
+}
