@@ -18,7 +18,7 @@ nav ul {
 }
 
 nav ul li.logo {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 nav ul li.logo a {
@@ -38,7 +38,7 @@ nav ul li.menu-item {
 
 nav ul li a {
   display: block;
-  padding: 0.4rem;
+  padding: 0.6rem;
   color: #f4f4f4;
 }
 
