@@ -36,6 +36,7 @@ form .form-group {
 form .form-group label {
   display: block;
   color: #f4f4f4;
+  margin-bottom: 0.35rem;
 }
 
 form .form-group input,
@@ -47,7 +48,7 @@ form .form-group textarea {
 }
 
 form .form-group textarea {
-  height: 10rem;
+  height: 0.1rem;
 }
 
 form .form-group input:focus,
