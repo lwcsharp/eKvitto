@@ -1,4 +1,4 @@
-@import '/navigation/navbar.css';
+@import '/views/components/navigation/navbar.css';
 @import '/assets/css/form.css';
 
 * {

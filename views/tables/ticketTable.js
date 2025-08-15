@@ -1,11 +1,16 @@
-import { getTickets } from '../models/ticketModel.js';
+import { getTickets } from '../../../models/ticketModel.js';
 
 export async function loadTicketTable() {
   try {
     //Load table template
-    const response = await fetch('/tables/ticketTable.html');
+    const response = await fetch('/views/tables/ticketTable.html');
     const html = await response.text();
     document.getElementById('table-container').innerHTML = html;
+
+    // Visa laddningsindikator
+    const tbody = document.querySelector('tbody');
+    tbody.innerHTML =
+      '<tr><td colspan="6" style="text-align: center;">Loading Data...</td></tr>';
 
     //Get & show data
     const tickets = await getTickets();
@@ -25,8 +30,13 @@ export async function loadTicketTable() {
         `;
         tbody.appendChild(row);
       });
+    } else {
+      tbody.innerHTML =
+        '<tr><td colspan="6" style="text-align: center;">Cannot find data</td></tr>';
     }
   } catch (error) {
     console.error('Error Loading ticket table: ', error);
+    document.querySelector('tbody').innerHTML =
+      '<tr><td colspan="6" style="text-align: center;">Failed to load data</td></tr>';
   }
-};
+}

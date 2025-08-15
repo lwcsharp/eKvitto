@@ -1,4 +1,4 @@
-import { get } from '../scripts/httpClient.js';
+import { get } from '../services/httpClient.js';
 // hämta och spara kvittens i databasen
 
 // const initApp = () => {
