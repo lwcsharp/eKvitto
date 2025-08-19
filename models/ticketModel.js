@@ -10,9 +10,6 @@ export const getTickets = async () => {
     const tickets = await get('tickets');
     console.log('Fetched tickets: ', tickets);
     return tickets;
-    // for (let ticket of tickets) {
-    //   generateTicketHtml(ticket);
-    // }
   } catch (error) {
     console.error('Error fetching tickets: ', error);
   }
