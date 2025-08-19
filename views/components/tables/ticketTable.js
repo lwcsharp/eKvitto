@@ -3,7 +3,7 @@ import { getTickets } from '../../../models/ticketModel.js';
 export async function loadTicketTable() {
   try {
     //Load table template
-    const response = await fetch('/views/tables/ticketTable.html');
+    const response = await fetch('/views/components/tables/ticketTable.html');
     const html = await response.text();
     document.getElementById('table-container').innerHTML = html;
 

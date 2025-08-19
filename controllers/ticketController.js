@@ -1,7 +1,7 @@
 // mellanhand för att skicka data mellan front-end och back-end
 
-import { loadTicketForm } from '../views/forms/ticketForm.js';
-import { loadTicketTable } from '../views/tables/ticketTable.js';
+import { loadTicketForm } from '../views/components/forms/ticketForm.js';
+import { loadTicketTable } from '../views/components/tables/ticketTable.js';
 
 console.log('Ticket controller loaded');
 
