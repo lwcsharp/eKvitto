@@ -1,0 +1,26 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+/* Individuella cells*/
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+/* Header */
+th {
+  background-color: rgba(220, 220, 220, 0.9);
+}
+/* Cells */
+td {
+  background-color: rgba(240, 240, 240, 0.9);
+}
+
+.loading-message {
+  text-align: center;
+  padding: 1rem;
+  color: #666;
+}

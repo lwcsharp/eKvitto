@@ -1,44 +1,30 @@
-<div class="table-container">
   <article>
-    <style>
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        background-color: rgba(255, 255, 255, 0.8);
-      }
-      /* Individuella cells*/
-      th, td {
-        border: 1px solid #ccc;
-        padding: 8px;
-        text-align: left;
-      }
-      /* Header */
-      th {
-        background-color: rgba(220, 220, 220, 0.9);
-      }
-      /* Cells */
-      td {
-        background-color: rgba(240, 240, 240, 0.9);
-      }
-    </style>
-    </head>
-
     <body>
-      <table>
-        <thead>
-          <tr>
-            <th>Datum</th>
-            <th>Specifikation</th>
-            <th>Kund</th>
-            <th>Totalpris</th>
-            <th>Ex moms</th>
-            <th>Moms</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-    </body>
+      <div class="table-container">
+        <table>
+          <thead>
+
+            <tr>
+              <th>Datum</th>
+              <th>Specifikation</th>
+              <th>Kund</th>
+              <th>Totalpris</th>
+              <th>Ex moms</th>
+              <th>Moms</th>
+            </tr>
+            
+          </thead>
+          <tbody>
+
+            <tr>
+              <td colspan="6" class="loading-message">
+                Failed to load data
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+      </body>
   </article>
 </div>

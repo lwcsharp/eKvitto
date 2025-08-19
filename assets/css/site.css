@@ -1,5 +1,6 @@
 @import '/views/components/navigation/navbar.css';
 @import '/assets/css/form.css';
+@import '/assets/css/table.css';
 
 * {
   padding: 0;

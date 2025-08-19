@@ -10,7 +10,7 @@ export async function loadTicketTable() {
     // Visa laddningsindikator
     const tbody = document.querySelector('tbody');
     tbody.innerHTML =
-      '<tr><td colspan="6" style="text-align: center;">Loading Data...</td></tr>';
+      '<tr><td class="loading-message">Loading Data...</td></tr>';
 
     //Get & show data
     const tickets = await getTickets();
@@ -32,11 +32,9 @@ export async function loadTicketTable() {
       });
     } else {
       tbody.innerHTML =
-        '<tr><td colspan="6" style="text-align: center;">Cannot find data</td></tr>';
+        '<tr><td>Cannot find data</td></tr>';
     }
   } catch (error) {
     console.error('Error Loading ticket table: ', error);
-    document.querySelector('tbody').innerHTML =
-      '<tr><td colspan="6" style="text-align: center;">Failed to load data</td></tr>';
   }
 }
