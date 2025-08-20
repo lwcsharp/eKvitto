@@ -1,6 +1,7 @@
 import { loadProductForm } from "../forms/productForm.js";
 
-console.log("Product controller loaded");
+console.log("Product controller loading...");
+
 const initApp = async () => {
   console.log("Initializing app...");
   try {

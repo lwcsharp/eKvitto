@@ -1,6 +1,7 @@
 import { loadNavbar } from "../views/components/navigation/navbar.js";
 
-console.log("Initializing app...");
+console.log("Navigation controller loading...");
+
 const initApp = async () => {
   console.log("Initializing app...");
   try {

@@ -3,7 +3,7 @@
 import { loadTicketForm } from '../views/components/forms/ticketForm.js';
 import { loadTicketTable } from '../views/components/tables/ticketTable.js';
 
-console.log('Ticket controller loaded');
+console.log('Ticket controller loading...');
 
 const initApp = async () => {
   console.log('Initializing app...');
