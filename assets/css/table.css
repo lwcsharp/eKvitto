@@ -24,3 +24,10 @@ td {
   padding: 1rem;
   color: #666;
 }
+
+.delete-btn {
+  background: red;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}

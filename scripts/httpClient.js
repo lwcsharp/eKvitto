@@ -18,7 +18,7 @@ export const get = async (endpoint) => {
       throw new Error(`Error: ${response.status}, ${response.statusText}`);
     }
   } catch (error) {
-    console.log('Error: ', error);
+    console.log('Error getting data: ', error);
   }
 };
 
@@ -42,5 +42,27 @@ export const post = async (endpoint, data) => {
     }
   } catch (error) {
     console.log('Error posting data:', error);
+  }
+};
+
+export const remove = async (endpoint, id) => {
+  const url = `${Settings.apiUrl}/${endpoint}/${id}`;
+
+  try {
+    const response = await fetch(url, {
+      method: 'DELETE',
+      headers: {
+        'x-apikey': Settings.apiKey,
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      return true;
+    } else {
+      throw new Error(`Error: ${response.status}, ${response.statusText}`);
+    }
+  } catch (error) {
+    console.log('Error removing data:', error);
   }
 };

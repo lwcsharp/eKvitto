@@ -4,6 +4,6 @@ export async function loadProductForm() {
     const html = await response.text();
     document.getElementById('form-container').innerHTML = html;
   } catch (error) {
-    console.error('Error Loading ticket form: ', error);
+    console.error('Error Loading product form: ', error);
   }
 }

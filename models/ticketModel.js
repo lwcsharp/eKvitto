@@ -1,4 +1,4 @@
-import { get, post } from '../scripts/httpClient.js';
+import { get, post, remove } from '../scripts/httpClient.js';
 // hämta och spara kvittens i databasen
 
 // const initApp = () => {
@@ -25,4 +25,15 @@ export const getTickets = async () => {
       console.error('Error creating ticket: ', error);
       throw error;
     }
+};
+
+export const deleteTicket = async (ticketId) => {
+  try {
+    await remove('tickets', ticketId);
+    console.log('Deleted ticket:', ticketId);
+    return true;
+  } catch (error) {
+    console.error('Error deleting ticket:', error);
+    throw error;
+  }
 };

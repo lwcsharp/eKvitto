@@ -18,7 +18,6 @@ function setupFormHandler() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const formData = new FormData(e.target);
       const ticketData = Object.fromEntries(formData.entries());
@@ -33,6 +32,5 @@ function setupFormHandler() {
       alert('Fel vid skapande av kvitto');
     }
   };
-
   form.addEventListener('submit', handleSubmit);
 }

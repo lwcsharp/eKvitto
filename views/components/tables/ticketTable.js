@@ -1,4 +1,4 @@
-import { getTickets } from '../../../models/ticketModel.js';
+import { getTickets, deleteTicket } from '../../../models/ticketModel.js';
 import { showStatus, displayTickets } from '../../ticketTableView.js';
 
 export async function loadTicketTable() {
@@ -9,11 +9,11 @@ export async function loadTicketTable() {
 
     // Visa laddningsindikator
     const tbody = document.querySelector('tbody');
-    showStatus(tbody, 'loading'); 
+    showStatus(tbody, 'loading');
 
     const tickets = await getTickets();
     if (tickets && tickets.length > 0) {
-      displayTickets(tbody, tickets);
+      displayTickets(tbody, tickets, (id) => handleDelete(id, tbody));
     } else {
       showStatus(tbody, 'empty');
     }
@@ -21,5 +21,18 @@ export async function loadTicketTable() {
     console.error('Error Loading ticket table: ', error);
     const tbody = document.querySelector('tbody');
     showStatus(tbody, 'error');
+  }
+}
+
+async function handleDelete(ticketId, tbody) {
+  try {
+    if (confirm('Är du säker på att du vill radera detta kvitto?')) {
+      await deleteTicket(ticketId);
+      const tickets = await getTickets(); //uppdatera tabellen
+      displayTickets(tbody, tickets, (id) => handleDelete(id, tbody));
+    }
+  } catch (error) {
+    console.error('Error deleting ticket:', error);
+    alert('Kunde inte radera kvittot');
   }
 }
