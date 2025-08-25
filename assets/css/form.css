@@ -1,8 +1,7 @@
-/* Knappars utseende */
 .btn-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+ display: flex;           /* Put buttons in a row */
+  justify-content: center; /* Center buttons horizontally */
+  width: 100%;             /* Make button area as wide as the form */
   margin: 0 0 2rem 0;
 }
 
@@ -57,6 +56,6 @@ form .form-group textarea:focus {
 }
 
 form .form-price{
-  display: flex;
+  display: flex; /* Put price fields in a row */
   justify-content: space-evenly;
 }

@@ -1,9 +1,4 @@
 import { get, post, remove } from '../scripts/httpClient.js';
-// hämta och spara kvittens i databasen
-
-// const initApp = () => {
-//   getTickets();
-// };
 
 export const getTickets = async () => {
   try {

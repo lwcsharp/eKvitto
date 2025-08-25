@@ -107,7 +107,6 @@ nav ul li .menu-btn:checked ~ .menu-icon .nav-icon::after {
   top: 0;
 }
 
-/* MEDIA QUERIES */
 @media (min-width: 768px) {
   nav ul {
     flex-wrap: nowrap;

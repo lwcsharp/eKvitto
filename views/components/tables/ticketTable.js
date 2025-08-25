@@ -7,7 +7,7 @@ export async function loadTicketTable() {
     const html = await response.text();
     document.getElementById('table-container').innerHTML = html;
 
-    // Visa laddningsindikator
+    // show loadingindication
     const tbody = document.querySelector('tbody');
     showStatus(tbody, 'loading');
 
@@ -28,7 +28,7 @@ async function handleDelete(ticketId, tbody) {
   try {
     if (confirm('Är du säker på att du vill radera detta kvitto?')) {
       await deleteTicket(ticketId);
-      const tickets = await getTickets(); //uppdatera tabellen
+      const tickets = await getTickets(); //update table
       displayTickets(tbody, tickets, (id) => handleDelete(id, tbody));
     }
   } catch (error) {

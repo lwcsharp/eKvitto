@@ -1,4 +1,4 @@
-// mellanhand för att skicka data mellan front-end och back-end
+//middlehandler ish to send data between front & back -end
 
 import { loadTicketForm } from '../views/components/forms/ticketForm.js';
 import { loadTicketTable } from '../views/components/tables/ticketTable.js';
