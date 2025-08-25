@@ -15,7 +15,7 @@ function createTableRow(ticket) {
     <td>${ticket.vat} kr</td>
     <td>
       <button class="delete-btn" data-id="${ticket._id}">
-        <i class="fas fa-trash"></i>
+        <i style="font-size:20px" class="fa">&#xf014;</i>      
       </button>
     </td>
   `;
@@ -31,7 +31,7 @@ export function displayTickets(tbody, tickets, onDelete) {
   tickets.forEach((ticket) => {
     const row = createTableRow(ticket);
     const deleteBtn = row.querySelector('.delete-btn');
-    
+
     if (deleteBtn) {
       deleteBtn.addEventListener('click', () => onDelete(ticket._id));
     }
