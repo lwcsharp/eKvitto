@@ -1,3 +1,5 @@
+// View: Renders the ticket table rows, formats data, and attaches delete events
+
 const messages = {
   loading: 'Loading Data...',
   empty: 'Cannot find data',
@@ -39,6 +41,7 @@ export function showStatus(tbody, type) {
   tbody.innerHTML = `<tr><td colspan="6" class="loading-message">${messages[type]}</td></tr>`;
 }
 
+// renders all tickets and attaches delete event to each row
 export function displayTickets(tbody, tickets, onDelete) {
   tbody.innerHTML = '';
   tickets.forEach((ticket) => {

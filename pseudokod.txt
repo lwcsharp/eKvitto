@@ -1,0 +1,55 @@
+När sidan laddas:
+    Kör initApp för navigationController
+        Ladda navbar och lägg in i DOM
+
+    Kör initApp för ticketController
+        Om #form-container finns:
+            Kör loadTicketForm
+                Hämta ticketForm.html
+                Lägg in formuläret i DOM
+                Koppla submit-event på formuläret:
+                    Vid submit:
+                        Samla in data från formuläret
+                        Skicka data till createTicket i ticketModel
+                            Skicka POST-request till API
+                            Om lyckat:
+                                Visa "Kvitto skapat!"
+                                Nollställ formuläret
+                            Om fel:
+                                Visa felmeddelande
+
+        Om #table-container finns:
+            Kör loadTicketTable
+                Hämta ticketTable.html
+                Lägg in tabellen i DOM
+                Visa "Loading..." i tabellen
+                Hämta kvitton via getTickets i ticketModel
+                    Skicka GET-request till API
+                    Returnera lista med kvitton
+                Om kvitton finns:
+                    Kör displayTickets i ticketTableView
+                        För varje kvitto:
+                            Skapa en tabellrad med data och delete-knapp
+                            Koppla click-event på delete-knappen:
+                                Vid klick:
+                                    Bekräfta radering
+                                    Kör deleteTicket i ticketModel
+                                        Skicka DELETE-request till API
+                                        Om lyckat:
+                                            Hämta nya kvitton och uppdatera tabellen
+                                        Om fel:
+                                            Visa felmeddelande
+                Om inga kvitton:
+                    Visa "empty" status i tabellen
+                Om fel vid hämtning:
+                    Visa "error" status i tabellen
+
+    Kör initApp för productController (på produktsidan)
+        Ladda productForm och lägg in i DOM
+        (Liknande flöde som för ticketForm)
+
+
+
+All datahantering (GET, POST, DELETE) sker via httpClient.js som pratar med REST API:t.
+Alla vyer (formulär, tabeller) laddas in dynamiskt och kopplar event efter inladdning.
+Alla fel hanteras med try/catch och visas för användaren.

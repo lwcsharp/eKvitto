@@ -1,0 +1,18 @@
+Navigation laddas alltid
+
+TicketController laddar formulär och/eller tabell beroende på om de finns i DOM
+
+Formulär:
+Laddas in via fetch
+Event kopplas efter inladdning
+Vid submit skickas data till API och formuläret nollställs
+
+Tabell:
+Laddas in via fetch
+Data hämtas från API
+Varje rad får en delete-knapp med event
+Vid delete tas raden bort från API och tabellen uppdateras
+
+Alla API-anrop går via httpClient.js
+
+Fel hanteras och visas för användaren
